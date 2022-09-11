@@ -68,6 +68,7 @@ def parse_one_page(html):                                       #解析html部�
 #主函数
 def main():
     global url
+    os.remove("test_file.txt")                                  #删除原IP文件
     for i in range(10):                                       #通过循环取得一个数字i
         html=get_one_page(url+str(i))                       #因为循环是从0开始的，并且转换成str类型添加在url末尾
         parse_one_page(html)
